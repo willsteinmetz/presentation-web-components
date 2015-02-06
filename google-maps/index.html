@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>WTL - Web Component: Google Maps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css" media="screen">
+
+  <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+  <link rel="import" href="../bower_components/google-map/google-map.html">
+
+  <style>
+    google-map {
+      height: 600px;
+      margin: 0 auto;
+      width: 800px;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Web Component - Google Maps</h1>
+  <p><a href="../">&laquo; Back</a></p>
+
+  <google-map latitude="35.99641" longitude="-78.90355" zoom="15">
+    <google-map-marker latitude="35.99641" longitude="-78.90355" draggable="true" title="SciMed Solutions"></google-map-marker>
+  </google-map>
+
+</body>
+</html>
