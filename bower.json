@@ -20,6 +20,7 @@
     "jquery": "~2.1.3",
     "polymer": "Polymer/polymer#~0.5.4",
     "normalize.css": "~3.0.2",
-    "google-map": "~0.4.1"
+    "google-map": "~0.4.1",
+    "google-youtube": "~1.0.3"
   }
 }
