@@ -1,0 +1,3 @@
+[submodule "well-plate"]
+	path = well-plate
+	url = git@git.scimedsolutions.com:will.steinmetz/polymer-playground.git
