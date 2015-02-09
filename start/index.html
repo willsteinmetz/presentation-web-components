@@ -8,9 +8,56 @@
 
   <link rel="stylesheet" href="./bower_components/normalize.css/normalize.css" media="screen">
 
+  <style>
+    article {
+      border: solid 1px #ccc;
+      box-sizing: border-box;
+      display: block;
+      height: 400px;
+      padding: .5rem;
+      overflow: hidden;
+      width: 300px;
+    }
+
+    article header {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: .25rem;
+    }
+
+    article figure {
+      background-color: #f6f6f6;
+      box-sizing: border-box;
+      float: left;
+      margin: 0 .5rem .5rem 0;
+      max-width: 50%;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    article figure img {
+      max-width: 100%;
+    }
+
+    article figure figcaption {
+      font-size: 0.75rem;
+      font-style: italic;
+      padding-top: 0.25rem;
+    }
+  </style>
+
 </head>
 <body>
   <h1>Weekly Training Lunch - News Article Component</h1>
+
+  <article>
+    <header>News Article Title</header>
+    <figure>
+      <img src="assets/images/html6.jpg" alt="HTML6">
+      <figcaption>A proposed HTML6 logo</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </article>
 
 </body>
 </html>
