@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Weekly Training Lunch - News Article Component</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./bower_components/normalize.css/normalize.css" media="screen">
+
+  <script src="./bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+  <link rel="import" href="elements/news-article.html">
+  <link rel="import" href="elements/news-article-image.html">
+  <link rel="import" href="elements/news-article-service.html">
+
+  <style>
+    news-article /deep/ figure {
+      margin: 0 .5rem .5rem 0;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Weekly Training Lunch - News Article Component</h1>
+
+  <news-article heading="News Article Title">
+    <figure is="news-article-image" imgsrc="assets/images/html6.jpg" imgalt="HTML6" caption="A proposed HTML6 logo"></figure>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </news-article>
+  <news-article-service></news-article-service>
+
+</body>
+</html>

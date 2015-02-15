@@ -1,0 +1,28 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="news-article-service" attributes="articles">
+  <template>
+    <style>
+      :host {
+        display: none;
+      }
+    </style>
+    <core-ajax id="ajax"
+      auto
+      url="../articles.json"
+      on-core-response="{{articlesLoaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+    Polymer({
+      create: function() {
+        this.articles = [];
+      },
+      articlesLoaded: function() {
+        this.articles = this.$.ajax.response.articles;
+      }
+    });
+  </script>
+</polymer-element>

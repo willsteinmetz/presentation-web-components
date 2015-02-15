@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "title": "Turn on the LAMP",
+      "author": "Will Steinmetz",
+      "published": "02/16/2015"
+    },
+    {
+      "title": "Rails Engines >_>",
+      "author": "Emerson Huitt",
+      "published": "02/16/2015"
+    },
+    {
+      "title": "Polymer is Cool",
+      "author": "Will Steinmetz",
+      "published": "02/16/2015"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="news-article" attributes="heading" constructor="NewsArticle">
+  <template>
+    <style>
+      :host {
+        border: solid 1px #ccc;
+        box-sizing: border-box;
+        display: block;
+        height: 400px;
+        padding: .5rem;
+        overflow: hidden;
+        width: 300px;
+      }
+      header {
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-bottom: .25rem;
+      }
+    </style>
+
+    <header>{{heading}}</header>
+    <content select="figure"></content>
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      heading: "[News Article Heading]"
+    });
+  </script>
+</polymer-element>

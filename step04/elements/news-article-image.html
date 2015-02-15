@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="news-article-image" extends="figure" attributes="imgsrc imgsrcset imgalt caption" constructor="NewsArticleImage">
+  <template>
+    <style>
+      :host {
+        background-color: #f6f6f6;
+        box-sizing: border-box;
+        float: left;
+        margin: 0 .5rem .5rem 0;
+        max-width: 50%;
+        padding: 0.5rem;
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      figcaption {
+        font-size: 0.75rem;
+        font-style: italic;
+        padding-top: 0.25rem;
+      }
+    </style>
+
+    <img src="{{imgsrc}}" alt="{{caption}}" srcset="{{imgsrcset}}">
+    <figcaption>{{caption}}</figcaption>
+
+  </template>
+  <script>
+    Polymer({
+      imgsrc: '',
+      imgsrcset: '',
+      imgalt: '',
+      caption: ''
+    });
+  </script>
+</polymer-element>
