@@ -1,0 +1,34 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="news-article.html">
+<link rel="import" href="news-article-image.html">
+<link rel="import" href="news-article-service.html">
+
+<polymer-element name="news-article-list">
+  <template>
+
+    <style>
+      news-article {
+        float: left;
+        margin-right: 1rem;
+      }
+
+      news-article /deep/ figure {
+        margin: 0 .5rem .5rem 0;
+      }
+    </style>
+
+    <news-article-service id="news-articles" articles="{{articles}}">
+    </news-article-service>
+
+    <template repeat="{{ article in articles }}">
+      <news-article heading="{{article.title}}">
+        <figure is="news-article-image" imgsrc="{{article.imgsrc}}" imgalt="{{article.imgalt}}" caption="{{article.caption}}"></figure>
+        <p>{{article.content}}</p>
+      </news-article>
+    </template>
+
+  </template>
+  <script>
+    Polymer({});
+  </script>
+</polymer-element>
