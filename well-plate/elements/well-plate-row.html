@@ -1,0 +1,31 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="well-plate-row" attributes="row columns" extends="tr">
+  <template>
+    <th scope="row">{{rowHeader()}}</th>
+    <template repeat="{{ col in columnCount() }}">
+      <content select="td"></content>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      row: 1,
+      columns: 12,
+      computed: {
+        rowHeader: 'rowHeaderStr',
+        columnCount: 'columnCountArr'
+      },
+      columnCountArr: function() {
+        cols = []
+        for (i = 1; i <= this.columns; i++) {
+          cols.push(i);
+        }
+
+        return cols;
+      },
+      rowHeaderStr: function() {
+        return String.fromCharCode(this.row + 64);
+      }
+    });
+  </script>
+</polymer-element>

@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="well-plate-header" attributes="columns" extends="thead" constructor="WellPlateHeader">
+  <template>
+    <style>
+      .dead-header-cell {
+        background-color: #666;
+      }
+    </style>
+    <tr id="plate_header_row">
+      <th class="dead-header-cell"></th>
+      <template repeat="{{ col in columnHeaders() }}">
+        <th on-click="{{headerClick}}">{{col}}</th>
+      </template>
+    </tr>
+  </template>
+  <script>
+    Polymer({
+      columns: 12,
+      computed: {
+        columnHeaders: 'getColumnHeaders'
+      },
+      headerClick: function(event, detail, sender) {
+        console.log(event);
+      },
+      getColumnHeaders: function() {
+        var i, columnHeaders = [];
+        for (i = 1; i <= this.columns; i++) {
+          columnHeaders.push(i);
+        }
+        return columnHeaders;
+      }
+    });
+  </script>
+</polymer-element>

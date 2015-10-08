@@ -1,0 +1,57 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="well-plate-header.html">
+<link rel="import" href="well-plate-row.html">
+<link rel="import" href="well-plate-well.html">
+
+<polymer-element name="well-plate" attributes="rows columns wells" constructor="WellPlate">
+  <template>
+    <style>
+      table {
+        border-spacing: 0;
+      }
+    </style>
+    <p>There are {{rows}} rows and {{columns}} columns.</p>
+    <p>There are {{wells}} wells in this plate.</p>
+    <table>
+      <thead is="well-plate-header" columns="{{columns}}"></thead>
+      <tbody id="plate_body">
+        <template repeat="{{ row in rowCount() }}">
+          <tr is="well-plate-row" row="{{row}}">
+            <template repeat="{{ col in columnCount() }}">
+              <td is="well-plate-well" row="{{row}}" column="{{col}}"></td>
+            </template>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </template>
+  <script>
+    Polymer({
+      rows: 8,
+      columns: 12,
+      computed: {
+        wells: 'rows * columns',
+        rowCount: 'rowCountArr',
+        columnCount: 'columnCountArr'
+      },
+      rowCountArr: function() {
+        rows = []
+        for (i = 1; i <= this.rows; i++) {
+          rows.push(i);
+        }
+
+        return rows;
+      },
+      columnCountArr: function() {
+        columns = []
+        for (i = 1; i <= this.columns; i++) {
+          columns.push(i);
+        }
+
+        return columns;
+      },
+      ready: function() {
+      }
+    });
+  </script>
+</polymer-element>

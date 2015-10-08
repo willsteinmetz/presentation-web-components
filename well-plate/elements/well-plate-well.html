@@ -1,0 +1,21 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="well-plate-well" attributes="row column" extends="td" on-click="{{handleClick}}" constructor="WellPlateWell">
+  <template>
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      handleClick: function (event, detail, sender) {
+        element = event.currentTarget;
+        if ((' ' + element.className + ' ').indexOf(' selected ') > -1) {
+          classes = element.className.split(' ');
+          classes.splice(classes.indexOf('selected'), 1);
+          element.className = classes.join(' ');
+        } else {
+          element.className = (element.className + ' selected').trim();
+        }
+      }
+    });
+  </script>
+</polymer-element>

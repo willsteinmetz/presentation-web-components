@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Polymer Playground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="./bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="./bower_components/normalize.css/normalize.css" media="screen">
+
+  <!-- polymer elements -->
+  <link rel="import" href="./elements/well-plate.html">
+
+  <style>
+    well-plate /deep/ th {
+      background-color: #efefef;
+      border: solid 1px #ccc;
+      padding: .25rem .5rem;
+    }
+    well-plate /deep/ td[is="well-plate-well"] {
+      border: solid 1px #ccc;
+      padding: .25rem .5rem;
+    }
+    well-plate /deep/ td[is="well-plate-well"].selected {
+      border: dashed 1px #333;
+    }
+  </style>
+</head>
+<body>
+
+  <well-plate>
+  </well-plate>
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+//    $(function() {
+//      $('well-plate').on('click', function(event) {
+//        console.log(event);
+//      });
+//    });
+  </script>
+
+</body>
+</html>
