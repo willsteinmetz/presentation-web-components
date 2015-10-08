@@ -4,4 +4,4 @@ This is a presentation I gave about creating web components with the Polymer lib
 
 ## Presentation
 
-The Google Presentation is available online at https://docs.google.com/presentation/d/1IEIsyvfTQ6snD9aMKbwhGX0AXpIwEbzOpne2LQZGcco/edit#slide=id.ge33adda7c_0_10
+The Google Presentation is available online at https://docs.google.com/presentation/d/1IEIsyvfTQ6snD9aMKbwhGX0AXpIwEbzOpne2LQZGcco/edit?usp=sharing
